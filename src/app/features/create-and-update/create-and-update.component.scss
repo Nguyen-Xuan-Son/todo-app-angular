@@ -1,0 +1,28 @@
+.content-container {
+    padding: 20px;
+
+    .feild {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin-bottom: 3px;
+        font-weight: bold;
+    }
+
+    .title-input {
+        width: 100%;
+    }
+
+    .more-option {
+        display: flex;
+        justify-content: space-between;
+
+        &--due-date,
+        &--piority {
+            width: 45%;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.root {
+    padding-bottom: 10px;
+    margin-bottom: 100px;
+
+    .bulk-action {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        background: aliceblue;
+    }
+
+    .search-input-container {
+        display: flex;
+        justify-content: center;
+
+        .search-input {
+            width: 93%;
+        }
+    }
+}

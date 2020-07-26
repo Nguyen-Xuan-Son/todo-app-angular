@@ -1,0 +1,14 @@
+<button
+  class="root"
+  type="button"
+  [ngClass]="{
+    'info' : type === 'info' && !disabled,
+    'error' : type === 'error' && !disabled,
+    'primary' : type === 'primary' && !disabled,
+    'success' : type === 'success' && !disabled,
+    'warning' : type === 'warning' && !disabled
+  }"
+  (click)="dispatchOnClick()"
+>
+  {{text}}
+</button>

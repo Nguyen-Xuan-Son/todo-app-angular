@@ -1,0 +1,21 @@
+<div class="root" *ngIf="isShow">
+  <div class="title">Bulk Action:</div>
+  <div class="action">
+    <div class="btn">
+      <app-button
+        text="Done"
+        (emitOnClick)="dispatchActionBtn('done')"
+        type="primary"
+      >
+      </app-button>
+    </div>
+    <div class="btn">
+      <app-button
+        text="Remove"
+        (emitOnClick)="dispatchActionBtn('remove')"
+        type="error"
+      >
+      </app-button>
+    </div>
+  </div>
+</div>

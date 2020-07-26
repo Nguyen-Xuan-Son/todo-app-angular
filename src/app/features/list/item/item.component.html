@@ -1,0 +1,40 @@
+<div class="root" *ngIf="task">
+  <div class="header-container">
+    <div class="do-homework-checkbox">
+      <input
+        type="checkbox"
+        [(ngModel)]="task.isDone"
+        (ngModelChange)="handleCheckbox()"
+      />
+      <label>{{task.title}}</label>
+    </div>
+  
+    <div class="btn-actions">
+      <div class="btn-actions--detail">
+        <app-button
+          text="Detail"
+          type="info"
+          (emitOnClick)="dispatchActionBtn('detail')"
+        >
+        </app-button>
+      </div>
+      <div class="btn-actions--remove">
+        <app-button
+          text="Remove"
+          type="error"
+          task
+          (emitOnClick)="dispatchActionBtn('remove')"
+        >
+        </app-button>
+      </div>
+    </div>
+  </div>
+  <app-create-and-update
+    *ngIf="isShow"
+    class="detail-task"
+    mode="UPDATE"
+    [task]='task'
+    (emitTaskUpdated)="getTaskUpdatedById($event)"
+  ></app-create-and-update>
+</div>
+

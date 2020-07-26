@@ -1,0 +1,22 @@
+.root {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    border-top: 1px solid black;
+    bottom: 0;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+        margin-left: 20px;
+    }
+
+    .action {
+        display: flex;
+
+        .btn {
+            margin-right: 10px;
+            width: 100px;
+        }
+    }
+}

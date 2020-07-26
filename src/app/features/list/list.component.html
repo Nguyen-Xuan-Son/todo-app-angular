@@ -1,0 +1,23 @@
+<div class="root">
+  <div class="search-input-container">
+    <app-input
+      class="search-input"
+      placeholder="Search ..."
+      [(content)]="titleSearch"
+      (contentChange)="handleFilter($event)"
+    ></app-input>
+  </div>
+  <ng-container *ngFor="let task of tasks">
+    <app-item
+      [task]="task"
+      (taskDoneChange)="handleShowBulkAction()"
+    ></app-item>
+  </ng-container>
+
+  <app-bulk-action
+    class="bulk-action"
+    [isShow]="isShowBulkAction"
+    (removeTasks)="removeTasksById()"
+  >
+  </app-bulk-action>
+</div>

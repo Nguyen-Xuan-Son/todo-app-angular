@@ -1,0 +1,48 @@
+<div class="content-container">
+  <div class="title-input feild">
+    <app-input
+      placeholder="Enter title here"
+      [(content)]="task.title"
+    ></app-input>
+  </div>
+
+  <div class="description feild">
+    <label>Description</label>
+    <textarea
+      [(ngModel)]="task.description"
+      placeholder="Enter description here"
+      rows="10"
+    ></textarea>
+  </div>
+
+  <div class="more-option">
+    <div class="more-option--due-date feild">
+      <label>Due Date</label>
+      <input
+        type="date"
+        [min]="minDate"
+        [(ngModel)]="task.dueDate"
+      />
+    </div>
+    <div class="more-option--piority feild">
+      <label>Piority</label>
+      <select
+        [(ngModel)]="task.piority"
+      >
+        <option value="normal">Normal</option>
+        <option value="low">Low</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="action feild">
+    <app-button
+      [text]="mode === 'CREATE' ? 'Add' : 'Update'"
+      [type]="mode === 'CREATE' ? 'success' : 'warning'"
+      (emitOnClick)="dispatchActionBtn()"
+      [disabled]="!task.title"
+    >
+    </app-button>
+  </div>
+</div>

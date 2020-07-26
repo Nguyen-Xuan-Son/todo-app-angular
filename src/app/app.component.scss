@@ -1,0 +1,28 @@
+.root {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .container {
+        width: 65%;
+        margin: 20px;
+        border: solid 1px black;
+        display: flex;
+        .new-task {
+            width: 40%;
+            border-right: solid 1px black;
+        }
+    
+        .list-to-do {
+            width: 60%;
+            position: relative;
+        }
+
+        .title {
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+}
